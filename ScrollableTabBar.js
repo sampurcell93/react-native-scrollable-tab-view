@@ -49,7 +49,7 @@ class ScrollableTabBar extends React.Component {
       _widthTabUnderline: new Animated.Value(0),
       _containerWidth: null,
     };
-    bindAll(this, 'onContainerLayout', 'onTabContainerLayout', 'measureTab', 'renderTabOption', 'updateTabPanel', 'updateTabUnderline');
+    bindAll(this, 'onContainerLayout', 'onTabContainerLayout', 'measureTab', 'renderTabOption', 'updateTabPanel', 'updateTabUnderline', 'updateView');
   }
 
   componentDidMount() {
@@ -124,7 +124,6 @@ class ScrollableTabBar extends React.Component {
   }
 
   renderTabOption(name, page) {
-    console.log(' in super render ')
     const isTabActive = this.props.activeTab === page;
     const { activeTextColor, inactiveTextColor, textStyle, } = this.props;
     const textColor = isTabActive ? activeTextColor : inactiveTextColor;
