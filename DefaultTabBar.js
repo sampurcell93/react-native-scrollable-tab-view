@@ -59,7 +59,7 @@ const DefaultTabBar = React.createClass({
     const tabUnderlineStyle = {
       position: 'absolute',
       width: containerWidth / numberOfTabs,
-      height: 4,
+      height: 2.5,
       backgroundColor: 'navy',
       bottom: 0,
     };
@@ -85,9 +85,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingBottom: 10
   },
   tabs: {
-    height: 50,
+    height: 40,
     flexDirection: 'row',
     justifyContent: 'space-around',
     borderWidth: 1,
