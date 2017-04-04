@@ -14,7 +14,7 @@ const Button = require('./Button');
 const WINDOW_WIDTH = Dimensions.get('window').width;
 
 class ScrollableTabBar extends React.Component {
-  propTypes: {
+  static propTypes = {
     goToPage: React.PropTypes.func,
     activeTab: React.PropTypes.number,
     tabs: React.PropTypes.array,
@@ -28,29 +28,10 @@ class ScrollableTabBar extends React.Component {
     tabStyle: View.propTypes.style,
     tabsContainerStyle: View.propTypes.style,
     textStyle: Text.propTypes.style,
-<<<<<<< HEAD
     renderTab: React.PropTypes.func,
     underlineStyle: View.propTypes.style,
     onScroll:React.PropTypes.func,
-  },
-
-  getDefaultProps() {
-    return {
-      scrollOffset: 52,
-      activeTextColor: 'navy',
-      inactiveTextColor: 'black',
-      backgroundColor: null,
-      style: {},
-      tabStyle: {},
-      tabsContainerStyle: {},
-      underlineStyle: {},
-    };
-  },
-
-  getInitialState() {
-=======
   };
-
   static defaultProps = {
     scrollOffset: 52,
     activeTextColor: 'navy',
@@ -65,7 +46,6 @@ class ScrollableTabBar extends React.Component {
 
   constructor() {
     super()
->>>>>>> Changed scrollable tab bar to ES6 to solve subclassing problem.
     this._tabsMeasurements = [];
     this.state = {
       _leftTabUnderline: new Animated.Value(0),
@@ -184,16 +164,11 @@ class ScrollableTabBar extends React.Component {
 
     const key = I18nManager.isRTL ? 'right' : 'left';
     const dynamicTabUnderline = {
-<<<<<<< HEAD
       [`${key}`]: this.state._leftTabUnderline,
       width: this.state._widthTabUnderline
-    }
-=======
-      transform: [{translateX: this.state._leftTabUnderline}],
       left: 0,
       width: 135
     };
->>>>>>> Changed scrollable tab bar to ES6 to solve subclassing problem.
 
     return  <View
       style={[styles.container, {backgroundColor: this.props.backgroundColor, }, this.props.style]}
