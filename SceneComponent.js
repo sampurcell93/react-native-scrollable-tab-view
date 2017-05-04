@@ -1,6 +1,6 @@
 const React = require('react');
 const ReactNative = require('react-native');
-const {Component, } = React;
+const {Component, PropTypes} = React;
 const {View, StyleSheet, } = ReactNative;
 
 
