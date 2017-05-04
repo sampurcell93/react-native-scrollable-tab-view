@@ -165,7 +165,7 @@ class ScrollableTabBar extends React.Component {
     const key = I18nManager.isRTL ? 'right' : 'left';
     const dynamicTabUnderline = {
       [`${key}`]: this.state._leftTabUnderline,
-      width: this.state._widthTabUnderline
+      width: this.state._widthTabUnderline,
       left: 0,
       width: 135
     };
